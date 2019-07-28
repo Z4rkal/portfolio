@@ -1,0 +1,27 @@
+{
+  "name": "node200-ejs-portfolio",
+  "version": "1.0.0",
+  "description": "A project for serving up a portfolio using ejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z4rkal/portfolio.git"
+  },
+  "author": "Olivia Reed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Z4rkal/portfolio/issues"
+  },
+  "homepage": "https://github.com/Z4rkal/portfolio#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}

@@ -7,8 +7,8 @@ const app = express();
 
 //Try to set up our mail function
 try {
-    mail.setApiKey(process.env.SENDGRID_API_KEY || JSON.stringify(process.env.SENDGRID_API_KEY) || require('./sendKey'));
-    const myEmail = process.env.MY_EMAIL || JSON.stringify(process.env.SENDGRID_API_KEY) || require('./email');
+    mail.setApiKey(process.env.SENDGRID_API_KEY || require('./sendKey'));
+    const myEmail = process.env.MY_EMAIL || require('./email');
 
     function handleEmail(body) {
         const msg = {

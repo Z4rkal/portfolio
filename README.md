@@ -1,7 +1,11 @@
+### Project Description:
 This project is a simple node server that serves up a portfolio of sorts.
 
 It has a short description of myself, some of my projects at [@SanDiegoCodeSchool](https://github.com/SanDiegoCodeSchool), and a contact page for getting in touch with me.
 
+This project is deployed to [Heroku](https://of-portfolio.herokuapp.com/).
+
+#### Setup:
 If you'd like to use this as a template for your own portfolio, you can clone this project to your machine with:
 `git clone git@github.com:Z4rkal/portfolio.git`
 

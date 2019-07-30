@@ -15,6 +15,9 @@
         <div class='card mt-2'>
             <div class='card-body'>
                 <div class='card-text'>
+                    <% if (noMail) { %>
+                    <h2> Thanks for trying to contact me, by this point I would normally receive an email if everything was working :(</h2>
+                    <% } %>
                     Thanks <%= contact.firstName %>, I'll try to get back to you as soon as I am able!
                 </div>
             </div>

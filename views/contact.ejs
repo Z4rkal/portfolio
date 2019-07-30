@@ -13,6 +13,9 @@
     <%- include('partials/header') %>
     <div class='container'>
         <form class='card bg-light mt-2' action='/thanks' method='POST'>
+            <% if (noMail) { %>
+            <h2> Sorry, something went wrong so you won't be able to send me an email via this form </h2>
+            <% } %>
             <div class='card-header'>Use this form to send me an email with your contact info</div>
             <div class='card-body'>
                 <div class='card-text'>

@@ -3,8 +3,8 @@ const morgan = require('morgan');
 const { json, urlencoded } = require('body-parser');
 const mail = require('@sendgrid/mail');
 
-if (process.env.SNAPGRID_API_KEY != undefined)
-    mail.setApiKey(process.env.SNAPGRID_API_KEY);
+if (process.env.SENDGRID_API_KEY != undefined)
+    mail.setApiKey(process.env.SENDGRID_API_KEY);
 else
     mail.setApiKey(require('./sendKey'));
 

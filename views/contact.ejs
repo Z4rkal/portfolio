@@ -10,14 +10,7 @@
 </head>
 
 <body>
-    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
-        <div class='container'>
-            <a class='navbar-brand' href='/'>Olivia's Portfolio</a>
-            <span class='navbar-text'>
-                <a href='/contact' class='my-2 my-sm-2 px-4'>Contact</a>
-            </span>
-        </div>
-    </nav>
+    <%- include('partials/header') %>
     <div class='container'>
         <form class='card bg-light mt-2' action='/thanks' method='POST'>
             <div class='card-header'>Use this form to send me an email with your contact info</div>

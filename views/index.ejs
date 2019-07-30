@@ -3,21 +3,14 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title><%= person.firstName %>'s Portfolio</title>
+    <title><%= author.firstName %>'s Portfolio</title>
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel='stylesheet' href='style.css'>
 </head>
 
 <body>
-    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
-        <div class='container'>
-            <a class='navbar-brand' href='/'><%= person.firstName %>'s Portfolio</a>
-            <span class='navbar-text'>
-                <a href='/contact' class='my-2 my-sm-2 px-4'>Contact</a>
-            </span>
-        </div>
-    </nav>
+    <%- include('partials/header') %>
     <div class='container'>
         <div class='card bg-light mt-2'>
             <div class='card-header'>
@@ -25,23 +18,65 @@
             </div>
             <div class='card-body'>
                 <div class='card-text'>
-                    <p>Hello, my name is <%= person.firstName %> <%= person.lastName %>. I'm a novice software engineer
-                        who's currently working her way through <a href='https://www.sdcs.io/'>San Diego Code
+                    <p>Hello, my name is <%= author.firstName %> <%= author.lastName %>. I'm a novice software engineer
+                        who's currently working <%= author.pronoun[1] %> way through <a href='https://www.sdcs.io/'>San
+                            Diego Code
                             School</a>.
                     </p>
                     <p>I graduated from California State University San Marcos in 2018 with a bachelor's degree in
                         computer science, and I've been coding since some time in ~2011.</p>
                     <p>Below you'll find some of the projects I've worked on here, but the rest can be found on my <a
-                            href='https://github.com/Z4rkal'>Github</a>.</p>
+                            href=`${<%= author.gitLink %>}`>Github</a>.</p>
                     <p>If you'd like to get in touch, there's a link to a contact form in the upper right.</p>
                 </div>
             </div>
         </div>
         <div class='card bg-light mt-2'>
             <div class='card-header'>
-                My Projects:
+                Some of My Projects:
             </div>
             <div class='card-body'>
+                <ul class='list-group'>
+                    <li class='list-group-item'>
+                        <div>
+                            <div class='row justify-content-between'>
+                                <h3 class='col'>Path of Exile Item Alerts</h3>
+                                <a class='col-xs-auto g-link'
+                                    href='https://github.com/Z4rkal/Path-of-Exile-Item-Alerts'>GitHub
+                                    Link</a>
+                            </div>
+                            <p>This is a simple <a href='https://www.pathofexile.com/game'>Path of Exile</a> live search
+                                tool that allows the user to search for items in the data returned from GGG's public
+                                stash tab api.</p>
+                            <p>The project started as part of a mock hackathon assignment, but since then I've added a
+                                lot to it and I'm pretty proud of how it turned out.</p>
+                        </div>
+                    </li>
+                    <li class='list-group-item'>
+                        <div>
+                            <div class='row justify-content-between'>
+                                <h3 class='col'>San Diego Top Spots</h3>
+                                <a class='col-xs-auto g-link' href='https://github.com/Z4rkal/React-Top-Spots'>GitHub
+                                    Link</a>
+                            </div>
+                            <p>This project uses a small Express server and ReactJS to serve up a list of 'the 30 top
+                                spots to visit in San Diego'.</p>
+                            <p>During the SDCS curriculum, this project reappears a few times as you learn new
+                                technologies, and this final iteration has come a long way from the first one that was
+                                built using html and vanilla javascript.</p>
+                        </div>
+                    </li>
+                    <li class='list-group-item'>
+                        <div>
+                            <div class='row justify-content-between'>
+                                <h3 class='col'>React Todo App</h3>
+                                <a class='col-xs-auto g-link' href='https://github.com/Z4rkal/React-Todo-App'>GitHub
+                                    Link</a>
+                            </div>
+                            <p>This project is a React app that lets you manage a simple 'to-do' list.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

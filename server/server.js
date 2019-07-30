@@ -22,6 +22,16 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
 
+//Anything stored in the app.locals object gets passed to views as local variables when they're rendered
+app.locals.author =
+    {
+        firstName: 'Olivia',
+        lastName: 'Fischer',
+        pronoun: ['she','her','hers'],
+        gitLink: 'https://github.com/Z4rkal'
+    };
+
+
 function handleEmail(body) {
     const msg = {
         to: myEmail,
@@ -50,14 +60,7 @@ app.post('/thanks', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    const data = {
-        person: {
-            firstName: 'Olivia',
-            lastName: 'Fischer',
-        }
-    }
-
-    res.render('index', data);
+    res.render('index');
 });
 
 module.exports = app;

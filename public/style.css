@@ -19,6 +19,14 @@ body {
 }
 
 .navbar {
+    background-color: #eaeaea;
+    border-right: 1px #dcdcdc solid;
+    border-left: 1px #dcdcdc solid;
+    border-bottom: 1px #dcdcdc solid;
     border-bottom-left-radius : 20px;
     border-bottom-right-radius: 20px;
+}
+
+.g-link {
+    margin-right: 0.25rem;
 }
